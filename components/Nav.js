@@ -1,4 +1,4 @@
-import request from "../utils/request";
+import request from "../utils/requests";
 import { useRouter } from "next/router"; //uso de Ruta para fetch de las peliculas
 
 function Nav() {
