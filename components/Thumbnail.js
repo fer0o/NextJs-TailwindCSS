@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image from "next/dist/client/image";
 import {ThumbUpIcon} from "@heroicons/react/outline"
 import { forwardRef } from "react";
 
 const Thumbnail = forwardRef(({ result },ref) => {
-  console.log(result);
+  //console.log(result);
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
 
   return (
@@ -22,8 +22,8 @@ const Thumbnail = forwardRef(({ result },ref) => {
         <h2> International Name: {result.name || result.title}</h2>
         <h2> Original Languaje: {result.original_language}</h2>
         <p className="truncate max-w-md"> Description: {result.overview}</p>
-        <p>Release date: {result.release_date || result.first_air_date} </p>
-
+        <p>
+            Release date: {result.release_date || result.first_air_date} </p>
         <p className="flex items-center opacity-0 group-hover:opacity-100">
           <ThumbUpIcon className="h-5 mx-2" /> {result.vote_count}
         </p>
